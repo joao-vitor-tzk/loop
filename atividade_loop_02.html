@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 02</title>
+</head>
+<body>
+    <h1>Recrutamento</h1>
+    <div id="222"></div>
+    <script>
+        let lista = ""
+        let total = 0
+        let divisao = 0
+        let numcandidato = 1
+        let media = 0
+        let idade 
+        let idade2 = 0
+        let sexo = ""
+        let expprof = ""
+        while (numcandidato != 0) {
+            numcandidato = prompt("Digite o número do candidato, ou '0' para ver a lista de informaçoes")
+            idade = prompt("Digite sua idade")
+            sexo = prompt("Digite qual seu sexo")
+            expprof = prompt("Digite se tem experiência profissional 'sim ou não' ")
+            
+
+            if(idade != 0){
+                divisao++
+
+                idade2 +=+ idade
+
+                media =parseInt (idade2 / divisao)
+            }
+            
+            if(numcandidato != 0){
+                total ++
+            }
+            
+            if(idade > 18 && expprof == "sim"){
+                lista +="<br>" + "Funcionário: " + numcandidato + "(" + sexo + ")" + "<br>"
+            }
+            
+            if(numcandidato == 0 ){
+            document.getElementById("222").innerHTML="Idade média dos candidatos: " + media + "<br>" + "<br>" + "Numero total de candidatos: " + total + "<br>" + "<br>" + "Candidatos maiores de 18 com experiência: " + lista
+            }
+
+            if(idade == 0){
+            document.getElementById("222").innerHTML="Idade média dos candidatos: " + media + "<br>" + "<br>" + "Numero total de candidatos: " + total + "<br>" + "<br>" + "Candidatos maiores de 18 com experiência: " + lista
+            }
+
+            if(sexo == 0){
+            document.getElementById("222").innerHTML="Idade média dos candidatos: " + media + "<br>" + "<br>" + "Numero total de candidatos: " + total + "<br>" + "<br>" + "Candidatos maiores de 18 com experiência: " + lista
+            }
+        
+        }
+
+
+
+
+
+
+
+
+
+
+        
+    </script>
+</body>
+</html>

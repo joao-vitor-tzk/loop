@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 01</title>
+</head>
+<body>
+    <h1>Peças aprovadas e reprovadas</h1>
+    <div id="400"></div>
+    <script>
+       let numpeca 
+       let peca = Number(1)
+       let aprovadas=""
+       let reprovadas=""
+       let resultado =""
+       let resultado2 ="" 
+       let qtdpecas = 0
+
+        while (peca != 0 ) {
+            numpeca = Number(prompt("Digite o numero da peça ou , '0' para sair"))
+            peca = Number(prompt("Digite '1' para aprovada e '2' para reprovada: " + qtdpecas + "'"  ))
+            
+            
+            if(peca == 1){
+                aprovadas += numpeca + "<br>"
+                resultado = "Peças aprovadas: " + "<br>" + aprovadas
+                qtdpecas++
+                
+            }
+            if(peca == 2){
+                reprovadas += numpeca + "<br>"
+                resultado2 = "Peças reprovadas: " + "<br>" + reprovadas
+                qtdpecas++
+                
+            }
+            if(qtdpecas == 400){
+                document.getElementById("400").innerHTML=resultado + "<br>" + resultado2 + "<br>" + "Total de peças: " + qtdpecas
+            }
+            if(numpeca == 0){
+                document.getElementById("400").innerHTML=resultado + "<br>" + resultado2 + "<br>" + "Total de peças: " + qtdpecas
+            }
+            if(peca == 0){
+                document.getElementById("400").innerHTML=resultado + "<br>" + resultado2 + "<br>" + "Total de peças: " + qtdpecas
+                
+            }
+
+        }
+        
+
+
+
+
+        
+    </script>
+    
+</body>
+</html>
